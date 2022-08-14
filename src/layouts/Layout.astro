@@ -16,6 +16,17 @@ const { title } = Astro.props as Props;
 		<title>{title}</title>
 	</head>
 	<body>
+		<nav class="absolute px-16 flex items-center w-screen h-[80px]">
+			<li class="list-none mr-[10px] text-xl hover:text-orange-500"><a href="">Home</a></li>
+			<li class="list-none mr-[10px] text-xl hover:text-orange-500"><a href="">Projects</a></li>
+		</nav>
+		<nav class="absolute top-0 right-0 w-[80px] h-screen flex flex-col justify-center">
+			<ul class="h-[50%] w-[80px] bg-white flex flex-col items-center justify-evenly">
+				<i>L</i>
+				<i>G</i>
+				<i>I</i>
+			</ul>
+		</nav>
 		<slot />
 	</body>
 </html>
