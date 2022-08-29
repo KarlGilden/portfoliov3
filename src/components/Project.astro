@@ -2,12 +2,13 @@
 export interface Props {
     name: string,
     description: string,
-
+    img: string,
+    reverse? : boolean
 }
-const { name, description } = Astro.props;
+const { name, description, img, reverse } = Astro.props;
 ---
 
-<div>
-    <h1>{name}</h1>
+<div class="w-full bg-primary p-5 rounded-sm">
+    <h1 class="text-3xl">{name}</h1>
     <p>{description}</p>
 </div>

@@ -2,7 +2,7 @@
 import '../assets/global.css'
 import Github from '/github.svg'
 import LinkedIn from '/linkedin.svg'
-import Instagram from '/instagram.svg'
+import Monitor from '/monitor.svg'
 export interface Props {
 	title: string;
 }
@@ -19,16 +19,8 @@ const { title } = Astro.props as Props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<nav class="absolute px-16 flex items-center h-[80px]">
-			<li class="list-none mr-[10px] text-xl hover:text-orange-500"><a href="">Home</a></li>
-			<li class="list-none mr-[10px] text-xl hover:text-orange-500"><a href="">Projects</a></li>
-		</nav>
-		<nav class="hidden sm:flex fixed top-0 right-0 w-[7%] h-screen flex-col justify-center">
-			<ul class="h-[50%] w-full bg-white flex flex-col items-center justify-evenly">
-				<a target="_blank" href="https://www.github.com/KarlGilden" class="text-white flex justify-center"><img class="w-[50%] fill-orange-500" src={Github} alt=""></a>
-				<a target="_blank" href="https://www.github.com/KarlGilden" class="text-white flex justify-center"><img class="w-[50%] fill-orange-500" src={LinkedIn} alt=""></a>
-				<a target="_blank" href="https://www.github.com/KarlGilden" class="text-white flex justify-center"><img class="w-[50%] fill-orange-500" src={Instagram} alt=""></a>
-			</ul>
+		<nav class="hidden sm:flex fixed top-0 left-0 w-[110px] h-screen flex-col justify-center bg-primary">
+			<img class="w-[15px]" src={Monitor} alt="">
 		</nav>
 		<slot />
 	</body>

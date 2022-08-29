@@ -1,25 +1,70 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
 import Project from "../components/Project.astro";
+import Laptop from '/main.jpg'
+import ApoteoThumb from '/ApoteoThumb.jpeg'
+import Github from '/github.svg'
+import LinkedIn from '/linkedin.svg'
+import Email from '/email.svg'
+import SectionHeader from "../components/SectionHeader.astro";
 ---
 
 
 <Layout title="Home">
-	<main class="flex items-center justify-center h-screen p-5 sm:p-16">
-		<div class="w-full text-center">
-			<h1 class="text-6xl">Karl Gildenhuys</h1>
+	<main class="flex bg-offwhite items-center justify-center h-screen p-5 sm:p-16">
+		<div class="w-[50%] text-left">
+			<h1 class="text-6xl font-title">Hi!<br>I'm <span class="text-primary">Karl</span>,<br>Web Developer</h1>
 			<div class="p-2"></div>
-			<h2 class="text-3xl text-orange-500">Web developer</h2>
-			<div class="p-10"></div>
-			<button class="p-3 text-xl bg-orange-500">My Projects</button>
+			<h2 class="text-2xl text-secondary">Web developer + Rock climber</h2>
+			<div class="p-2"></div>
+			<div class="flex items-center">
+				<button class="bg-primary text-xl text-white rounded-[100px] px-5 py-2">Resume</button>
+				<div class="p-5"></div>
+				<div class="display flex">
+					<img class="w-[25px] fill-primary" src={LinkedIn} alt="">
+					<div class="p-5"></div>
+					<img class="w-[25px] fill-primary" src={Github} alt="">
+					<div class="p-5"></div>
+					<img class="w-[25px] fill-primary" src={Email} alt="">
+				</div>
+			</div>
 		</div>
 	</main>
-	<section class="h-screen">
-		<Project 
-			name={"Apoteo"} 
-			description={"ppp"}
-		/>
+	<section class="bg-offwhite h-screen md:p-24  ml-[110px]">
+		<p class="text-2xl">Click on projects to see more!</p>
+		<div class="p-2"></div>
+		<div class="grid grid-cols-2 gap-5">
+			<Project 
+				name={"Apoteo"} 
+				description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."}
+				img={Laptop}
+			/>
+			<Project 
+				name={"BudgetMate"} 
+				description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."}
+				img={Laptop}
+				reverse
+			/>
+			<Project 
+				name={"BudgetMate"} 
+				description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."}
+				img={Laptop}
+				reverse
+			/>
+			<Project 
+				name={"BudgetMate"} 
+				description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."}
+				img={Laptop}
+				reverse
+			/>
+		</div>
+
+	</section>
+	<section class="bg-offwhite md:p-24 grid grid-cols-2 gap-5 ml-[110px]">
+		<SectionHeader title="A bit about me"/>
+	</section>	
+	<section class="bg-offwhite h-screen md:p-24 grid grid-cols-2 gap-5 ml-[110px]">
+		<SectionHeader title="My toolkit"/>
 	</section>
 </Layout>
 
