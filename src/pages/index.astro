@@ -6,6 +6,12 @@ import ApoteoThumb from '/ApoteoThumb.jpeg'
 import Github from '/github.svg'
 import LinkedIn from '/linkedin.svg'
 import Email from '/email.svg'
+import Html from '/html.svg'
+import React from '/react.svg'
+import Js from '/js.svg'
+import Dotnet from '/dotnet.svg'
+import Csharp from '/csharp.svg'
+import Firebase from '/firebase.svg'
 import SectionHeader from "../components/SectionHeader.astro";
 ---
 
@@ -30,7 +36,7 @@ import SectionHeader from "../components/SectionHeader.astro";
 			</div>
 		</div>
 	</main>
-	<section class="bg-offwhite h-screen md:p-24  ml-[110px]">
+	<section class="bg-offwhite md:px-40 md:py-16 ml-[110px]">
 		<p class="text-2xl">Click on projects to see more!</p>
 		<div class="p-2"></div>
 		<div class="grid grid-cols-2 gap-5">
@@ -60,11 +66,50 @@ import SectionHeader from "../components/SectionHeader.astro";
 		</div>
 
 	</section>
-	<section class="bg-offwhite md:p-24 grid grid-cols-2 gap-5 ml-[110px]">
+
+	<section class="bg-offwhite md:px-40 md:py-16 ml-[110px]">
 		<SectionHeader title="A bit about me"/>
+		<div class="p-5"></div>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 	</section>	
-	<section class="bg-offwhite h-screen md:p-24 grid grid-cols-2 gap-5 ml-[110px]">
+
+	<section class="bg-offwhite md:px-40 md:py-16 ml-[110px]">
+
 		<SectionHeader title="My toolkit"/>
+
+		<div class="p-5"></div>
+
+		<div class="flex flex-wrap w-full justify-center">
+			<div class="flex flex-col items-center">
+				<img class="w-[50px]" src={Html} alt="">
+				<p>HTML</p>
+			</div>
+			<div class="p-5"></div>
+			<div class="flex flex-col items-center">
+				<img class="w-[50px]" src={Js} alt="">
+				<p>JS</p>
+			</div>
+			<div class="p-5"></div>
+			<div class="flex flex-col items-center">
+				<img class="w-[50px]" src={Csharp} alt="">
+				<p>C#</p>
+			</div>
+			<div class="p-5"></div>
+			<div class="flex flex-col items-center">
+				<img class="w-[50px]" src={React} alt="">
+				<p>React</p>
+			</div>
+			<div class="p-5"></div>
+			<div class="flex flex-col items-center">
+				<img class="w-[50px]" src={Dotnet} alt="">
+				<p>.NET</p>
+			</div>
+			<div class="p-5"></div>
+			<div class="flex flex-col items-center">
+				<img class="w-[50px]" src={Firebase} alt="">
+				<p>Firebase</p>
+			</div>
+		</div>
 	</section>
 </Layout>
 
