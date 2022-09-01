@@ -8,7 +8,9 @@ export interface Props {
 const { name, description, img, reverse } = Astro.props;
 ---
 
-<div class="w-full bg-primary p-5 rounded-sm">
-    <h1 class="text-3xl">{name}</h1>
-    <p>{description}</p>
+<div class="w-full h-[200px] bg-primary p-5 rounded-sm group">
+    <div class="hidden group-hover:block">
+        <h1 class="text-3xl">{name}</h1>
+        <p>{description}</p>
+    </div>
 </div>

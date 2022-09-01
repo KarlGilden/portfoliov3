@@ -2,7 +2,12 @@
 import '../assets/global.css'
 import Github from '/github.svg'
 import LinkedIn from '/linkedin.svg'
+import Home from '/home.svg'
 import Monitor from '/monitor.svg'
+import User from '/user.svg'
+import Briefcase from '/briefcase.svg'
+import Email from '/email.svg'
+
 export interface Props {
 	title: string;
 }
@@ -19,8 +24,34 @@ const { title } = Astro.props as Props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<nav class="hidden sm:flex fixed top-0 left-0 w-[110px] h-screen flex-col justify-center bg-primary">
-			<img class="w-[15px]" src={Monitor} alt="">
+		<nav class="flex fixed top-0 left-[-1000px] sm:left-0 w-[110px] h-screen flex-col justify-evenly items-center bg-primary transition-all hover:w-[200px] group">
+			<div class="h-[100px]">
+				<h1 class="text-5xl text-white">KG</h1>
+			</div>
+			<div class="w-full flex flex-col items-center">
+				<div class="flex justify-center items-center w-full text-white cursor-pointer hover:text-black">
+					<img class="w-[15px]" src={Home} alt="">
+					<p class="hidden font-title ml-5 w-[50px] group-hover:block">Home</p>
+				</div>
+				<div class="p-5"></div>
+				<div class="flex justify-center w-full text-white cursor-pointer hover:text-black">
+					<img class="w-[15px]" src={Monitor} alt="">
+					<p class="hidden font-title ml-5 w-[50px] group-hover:block">Work</p>
+				</div>
+				<div class="p-5"></div>
+				<div class="flex justify-center w-full text-white cursor-pointer hover:text-black">
+					<img class="w-[15px]" src={User} alt="">
+					<p class="hidden font-title ml-5 w-[50px] group-hover:block">About</p>
+				</div>
+				<div class="p-5"></div>
+				<div class="flex justify-center w-full text-white cursor-pointer hover:text-black">
+					<img class="w-[15px]" src={Briefcase} alt="">
+					<p class="hidden ml-5 font-title w-[50px] group-hover:block ">Toolkit</p>
+				</div>
+			</div>
+			<div class="h-[100px]">
+				<h1 class="text-5xl"></h1>
+			</div>
 		</nav>
 		<slot />
 	</body>

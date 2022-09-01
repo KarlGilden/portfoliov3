@@ -1,8 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Section from "../layouts/Section.astro";
 import Project from "../components/Project.astro";
 import Laptop from '/main.jpg'
-import ApoteoThumb from '/ApoteoThumb.jpeg'
+import Profile from '/profile.jpg'
 import Github from '/github.svg'
 import LinkedIn from '/linkedin.svg'
 import Email from '/email.svg'
@@ -13,19 +14,21 @@ import Dotnet from '/dotnet.svg'
 import Csharp from '/csharp.svg'
 import Firebase from '/firebase.svg'
 import SectionHeader from "../components/SectionHeader.astro";
+import SkillIcon from "../components/SkillIcon.astro";
 ---
 
 
 <Layout title="Home">
-	<main class="flex bg-offwhite items-center justify-center h-screen p-5 sm:p-16">
-		<div class="w-[50%] text-left">
+	<main class="flex flex-col md:flex-row bg-offwhite sm:ml-[110px] items-center justify-center h-screen px-10 py-5 sm:p-16">
+		
+		<div class="w-full sm:w-[50%] text-left">
 			<h1 class="text-6xl font-title">Hi!<br>I'm <span class="text-primary">Karl</span>,<br>Web Developer</h1>
 			<div class="p-2"></div>
 			<h2 class="text-2xl text-secondary">Web developer + Rock climber</h2>
 			<div class="p-2"></div>
-			<div class="flex items-center">
+			<div class="flex flex-col items-start sm:flex-row flex-wrap sm:items-center">
 				<button class="bg-primary text-xl text-white rounded-[100px] px-5 py-2">Resume</button>
-				<div class="p-5"></div>
+				<div class="p-2"></div>
 				<div class="display flex">
 					<img class="w-[25px] fill-primary" src={LinkedIn} alt="">
 					<div class="p-5"></div>
@@ -35,11 +38,15 @@ import SectionHeader from "../components/SectionHeader.astro";
 				</div>
 			</div>
 		</div>
-	</main>
-	<section class="bg-offwhite md:px-40 md:py-16 ml-[110px]">
-		<p class="text-2xl">Click on projects to see more!</p>
 		<div class="p-2"></div>
-		<div class="grid grid-cols-2 gap-5">
+		<div class="w-[50%] sm:w-[35%] rounded-full overflow-hidden">
+			<img class="hidden md:block w-full" src={Profile} alt="">
+		</div>
+	</main>
+	<Section>
+		<SectionHeader title="My work"/>
+		<div class="p-5"></div>
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-5">
 			<Project 
 				name={"Apoteo"} 
 				description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."}
@@ -65,51 +72,25 @@ import SectionHeader from "../components/SectionHeader.astro";
 			/>
 		</div>
 
-	</section>
+	</Section>
 
-	<section class="bg-offwhite md:px-40 md:py-16 ml-[110px]">
+	<Section>
 		<SectionHeader title="A bit about me"/>
 		<div class="p-5"></div>
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-	</section>	
+	</Section>	
 
-	<section class="bg-offwhite md:px-40 md:py-16 ml-[110px]">
-
+	<Section>
 		<SectionHeader title="My toolkit"/>
-
 		<div class="p-5"></div>
-
 		<div class="flex flex-wrap w-full justify-center">
-			<div class="flex flex-col items-center">
-				<img class="w-[50px]" src={Html} alt="">
-				<p>HTML</p>
-			</div>
-			<div class="p-5"></div>
-			<div class="flex flex-col items-center">
-				<img class="w-[50px]" src={Js} alt="">
-				<p>JS</p>
-			</div>
-			<div class="p-5"></div>
-			<div class="flex flex-col items-center">
-				<img class="w-[50px]" src={Csharp} alt="">
-				<p>C#</p>
-			</div>
-			<div class="p-5"></div>
-			<div class="flex flex-col items-center">
-				<img class="w-[50px]" src={React} alt="">
-				<p>React</p>
-			</div>
-			<div class="p-5"></div>
-			<div class="flex flex-col items-center">
-				<img class="w-[50px]" src={Dotnet} alt="">
-				<p>.NET</p>
-			</div>
-			<div class="p-5"></div>
-			<div class="flex flex-col items-center">
-				<img class="w-[50px]" src={Firebase} alt="">
-				<p>Firebase</p>
-			</div>
+			<SkillIcon src={Html} name="HTML"/>
+			<SkillIcon src={Js} name="JS"/>
+			<SkillIcon src={Csharp} name="C#"/>
+			<SkillIcon src={React} name="React"/>
+			<SkillIcon src={Dotnet} name=".NET"/>
+			<SkillIcon src={Firebase} name="Firebase"/>
 		</div>
-	</section>
+	</Section>
 </Layout>
 
