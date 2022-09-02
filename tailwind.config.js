@@ -8,7 +8,9 @@ module.exports = {
       'offwhite': "#EDEDED",
       'primary': "#5384E4",
       'secondary': "#222",
-      'transparent': 'transparent'
+      'transparent': 'transparent',
+      'shade': 'rgba(43, 43, 43, 0.75)'
+
     },
     fontFamily: {
       'title': ['Alegreya\\ Sans', 'sans-serif']

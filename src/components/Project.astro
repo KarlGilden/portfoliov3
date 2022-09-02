@@ -3,14 +3,18 @@ export interface Props {
     name: string,
     description: string,
     img: string,
-    reverse? : boolean
+    github: string,
+    site: string
 }
-const { name, description, img, reverse } = Astro.props;
+
+const { name, description, img, github, site } = Astro.props;
 ---
 
-<div class="w-full h-[200px] bg-primary p-5 rounded-sm group">
-    <div class="hidden group-hover:block">
-        <h1 class="text-3xl">{name}</h1>
-        <p>{description}</p>
+<div class={`w-full h-[250px] rounded-sm group bg-cover bg-center ${img}`}>
+    <div class="hidden group-hover:block w-full h-full bg-shade p-5">
+        <div class="w-full flex items-center h-full">
+            <a class="w-[50%] m-5" target="_blank" href={site}><button class="w-full p-3 rounded-md border-white border-2 text-white transition-all hover:bg-black">View Site</button></a>
+            <a class="w-[50%] m-5" target="_blank" href={github}><button class="w-full p-3 rounded-md border-white border-2 text-white transition-all hover:bg-black">Github</button></a>
+        </div>
     </div>
 </div>
