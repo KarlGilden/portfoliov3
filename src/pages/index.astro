@@ -20,16 +20,20 @@ import SkillIcon from "../components/SkillIcon.astro";
 
 <Layout title="Home">
 	<main class="bg-offwhite px-5 pt-10 pb-5 sm:pt-16 sm:px-16 md:px-30 lg:px-40 sm:ml-[110px]">
-			<div class="flex items-start flex-wrap sm:items-center">
-				<a href="/KarlGildenhuysCV.pdf" download><button class="bg-primary text-xl text-white rounded-[100px] px-5 py-2">Resume</button></a>
-				<div class="p-2"></div>
-				<div class="display flex">
-					<a href="https://www.linkedin.com/in/karl-gildenhuys-b0286720a/" class="flex items-center"><img class="w-[25px] fill-primary" src={LinkedIn} alt=""></a>
-					<div class="p-5"></div>
-					<a href="https://github.com/KarlGilden" class="flex items-center"><img class="w-[25px] fill-primary" src={Github} alt=""></a>
-					<div class="p-5"></div>
-					<a href="mailto:karl.gildenhuys@gmail.com" class="flex items-center"><img class="w-[25px] fill-primary" src={Email} alt=""></a>
+			<div class="flex justify-between items-center">
+				<div class="flex">
+					<a href="/KarlGildenhuysCV.pdf" download><button class="bg-primary text-xl text-white rounded-[100px] px-5 py-2">Resume</button></a>
+					<div class="p-2"></div>
+					<div class="display flex">
+						<a href="https://www.linkedin.com/in/karl-gildenhuys-b0286720a/" class="flex items-center"><img class="w-[25px] fill-primary" src={LinkedIn} alt=""></a>
+						<div class="p-5"></div>
+						<a href="https://github.com/KarlGilden" class="flex items-center"><img class="w-[25px] fill-primary" src={Github} alt=""></a>
+						<div class="p-5"></div>
+						<a href="mailto:karl.gildenhuys@gmail.com" class="flex items-center"><img class="w-[25px] fill-primary" src={Email} alt=""></a>
+					</div>
+					<div class="p-2"></div>
 				</div>
+				<h1 class="font-title text-2xl hidden sm:block"> <span class="text-highlight">Karl</span>Gildenhuys</h1>
 		</div>
 	</main>
 	<Section>
