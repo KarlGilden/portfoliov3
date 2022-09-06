@@ -7,12 +7,14 @@ import Monitor from '/monitor.svg'
 import User from '/user.svg'
 import Briefcase from '/briefcase.svg'
 import Email from '/email.svg'
-
+import { Icon } from 'astro-icon'
 export interface Props {
 	title: string;
 }
 
 const { title } = Astro.props as Props;
+
+
 ---
 
 <!DOCTYPE html>
@@ -31,28 +33,62 @@ const { title } = Astro.props as Props;
 			<div class="w-full flex flex-col items-center">
 				<div class="flex justify-center items-center w-full text-white cursor-pointer hover:text-highlight">
 					<img class="w-[15px]" src={Home} alt="">
-					<p class="hidden font-title ml-5 w-[50px] group-hover:block">Home</p>
+					<a href="/"><p class="hidden font-title ml-5 w-[50px] group-hover:block">Home</p></a>
 				</div>
 				<div class="p-5"></div>
 				<div class="flex justify-center w-full text-white cursor-pointer hover:text-highlight">
 					<img class="w-[15px]" src={Monitor} alt="">
-					<p class="hidden font-title ml-5 w-[50px] group-hover:block">Work</p>
+					<a href="/"><p class="hidden font-title ml-5 w-[50px] group-hover:block">Work</p></a>
 				</div>
 				<div class="p-5"></div>
 				<div class="flex justify-center w-full text-white cursor-pointer hover:text-highlight">
 					<img class="w-[15px]" src={User} alt="">
-					<p class="hidden font-title ml-5 w-[50px] group-hover:block">About</p>
+					<a href="/"><p class="hidden font-title ml-5 w-[50px] group-hover:block">About</p></a>
 				</div>
 				<div class="p-5"></div>
 				<div class="flex justify-center w-full text-white cursor-pointer hover:text-highlight">
 					<img class="w-[15px]" src={Briefcase} alt="">
-					<p class="hidden ml-5 font-title w-[50px] group-hover:block ">Toolkit</p>
+					<a href="/"><p class="hidden ml-5 font-title w-[50px] group-hover:block ">Toolkit</p></a>
 				</div>
 			</div>
 			<div class="h-[100px]">
 				<h1 class="text-5xl"></h1>
 			</div>
 		</nav>
+
+		<nav id="nav" class="flex flex-col fixed py-16 top-0 left-[-2000px] h-screen w-full justify-between items-center bg-primary transition-all group">
+			<div class="h-[100px]">
+				<h1 class="text-5xl text-white">KG</h1>
+			</div>
+			<div class="w-full flex flex-col items-center">
+				<div class="flex justify-center items-center w-full text-white cursor-pointer hover:text-highlight">
+					<img class="w-[15px]" src={Home} alt="">
+					<a href="/" onclick="openMenu()"><p class="font-title ml-5 w-[50px]">Home</p></a>
+				</div>
+				<div class="p-5"></div>
+				<div class="flex justify-center w-full text-white cursor-pointer hover:text-highlight">
+					<img class="w-[15px]" src={Monitor} alt="">
+					<a href="/" onclick="openMenu()"><p class="font-title ml-5 w-[50px]">Work</p></a>
+				</div>
+				<div class="p-5"></div>
+				<div class="flex justify-center w-full text-white cursor-pointer hover:text-highlight">
+					<img class="w-[15px]" src={User} alt="">
+					<a href="/" onclick="openMenu()"><p class="font-title ml-5 w-[50px]">About</p></a>
+				</div>
+				<div class="p-5"></div>
+				<div class="flex justify-center w-full text-white cursor-pointer hover:text-highlight">
+					<img class="w-[15px]" src={Briefcase} alt="">
+					<a href="/" onclick="openMenu()"><p class="font-title ml-5 w-[50px]">Toolkit</p></a>
+				</div>
+			</div>
+			<div class="h-[100px]">
+				<h1 class="text-5xl"></h1>
+			</div>
+		</nav>
+
+		<div onclick="openMenu()">
+			<Icon class="w-[50px] sm:hidden absolute right-[15px] top-[15px]" name="eva:menu-outline"/>
+		</div>
 		<slot />
 	</body>
 </html>
@@ -78,3 +114,16 @@ const { title } = Astro.props as Props;
 			Bitstream Vera Sans Mono, Courier New, monospace;
 	}
 </style>
+
+<script is:inline>
+	const openMenu = () => {
+		if(document.getElementById("nav").classList.contains("left-[-2000px]")){
+			document.getElementById("nav").classList.remove("left-[-2000px]")
+			document.getElementById("nav").classList.add("left-0")
+		}else{
+			document.getElementById("nav").classList.add("left-[-2000px]")
+			document.getElementById("nav").classList.remove("left-0")
+		}
+
+	}
+</script>

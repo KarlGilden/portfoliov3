@@ -19,7 +19,7 @@ import SkillIcon from "../components/SkillIcon.astro";
 
 
 <Layout title="Home">
-	<main class="bg-offwhite px-5 pt-10 pb-5 sm:pt-16 sm:px-16 md:px-30 lg:px-40 sm:ml-[110px]">
+	<main class="bg-offwhite px-5 pt-20 pb-5 sm:pt-16 sm:px-16 md:px-30 lg:px-40 sm:ml-[110px]">
 			<div class="flex justify-between items-center">
 				<div class="flex">
 					<a href="/KarlGildenhuysCV.pdf" download><button class="bg-primary text-xl text-white rounded-[100px] px-5 py-2">Resume</button></a>
@@ -41,18 +41,12 @@ import SkillIcon from "../components/SkillIcon.astro";
 		<div class="p-5"></div>
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-5">
 			<Project 
-				name={"Apoteo"} 
-				description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."}
 				img={'bg-[url(/Apoteo.png)]'}
-				github="https://github.com/KarlGilden/apoteo/"
-				site="https://apoteo.vercel.app"
+				id={"1"}
 			/>
 			<Project 
-				name={"BudgetMate"} 
-				description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."}
 				img={'bg-[url(/BM.png)]'}
-				github="https://github.com/KarlGilden/budgetmate/"
-				site="https://effervescent-cactus-53aa4e.netlify.app/"
+				id={"2"}
 			/>
 		</div>
 
@@ -61,7 +55,7 @@ import SkillIcon from "../components/SkillIcon.astro";
 	<Section>
 		<SectionHeader title="A bit about me"/>
 		<div class="p-5"></div>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+		<p>My name is Karl. Having recently completed my BSc degree / Computer Science major from the University of Auckland, I am excited to start using my skills to add value to ... Checkout some of my projects above if you haven't already and get in touch if you think I look like a good fit for your company.</p>
 	</Section>	
 
 	<Section>
