@@ -2,7 +2,7 @@
     {
         "id": "1",
         "name": "Apoteo",
-        "desc": "blah blah blah",
+        "desc": "Coming Soon...",
         "github": "https://github.com/KarlGilden/Apoteo",
         "live": "https://apoteo.vercel.app",
         "img": "/Apoteo.png"
@@ -10,9 +10,9 @@
     {
         "id": "2",
         "name": "BudgetMate",
-        "desc": "blah blah blah",
+        "desc": "Coming Soon...",
         "github": "https://github.com/KarlGilden/budgetmate",
         "live": "https://effervescent-cactus-53aa4e.netlify.app/",
-        "img": "/Apoteo.png"
+        "img": "/BM.png"
     }
 ]
