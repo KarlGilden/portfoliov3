@@ -56,7 +56,13 @@ const { title } = Astro.props as Props;
 			</div>
 		</nav>
 
+		<div class="bg-offwhite sm:hidden w-full h-content flex justify-between items-center pt-5 px-5" >
+			<h1 class="font-title text-2xl"><span class="text-highlight">Karl</span>Gildenhuys</h1>
+			<Icon onclick="openMenu()" class="w-[50px]" name="eva:menu-outline"/>
+		</div>
+
 		<nav id="nav" class="flex flex-col fixed py-16 top-0 left-[-2000px] h-screen w-full justify-between items-center bg-primary transition-all group">
+			<Icon onclick="openMenu()" class="w-[50px] absolute top-[25px] right-[25px]" name="ep:close-bold"/>
 			<div class="h-[100px]">
 				<h1 class="text-5xl text-white">KG</h1>
 			</div>
@@ -85,10 +91,6 @@ const { title } = Astro.props as Props;
 				<h1 class="text-5xl"></h1>
 			</div>
 		</nav>
-
-		<div onclick="openMenu()">
-			<Icon class="w-[50px] sm:hidden absolute right-[15px] top-[15px]" name="eva:menu-outline"/>
-		</div>
 		<slot />
 	</body>
 </html>

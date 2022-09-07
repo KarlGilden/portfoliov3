@@ -8,6 +8,7 @@ import Github from '/github.svg'
 import LinkedIn from '/linkedin.svg'
 import Email from '/email.svg'
 import Html from '/html.svg'
+import Css from '/css.svg'
 import React from '/react.svg'
 import Js from '/js.svg'
 import Dotnet from '/dotnet.svg'
@@ -19,7 +20,7 @@ import SkillIcon from "../components/SkillIcon.astro";
 
 
 <Layout title="Home">
-	<main class="bg-offwhite px-5 pt-20 pb-5 sm:pt-16 sm:px-16 md:px-30 lg:px-40 sm:ml-[110px]">
+	<main class="bg-offwhite px-5 pt-5 pb-5 sm:pt-16 sm:px-16 md:px-30 lg:px-40 sm:ml-[110px]">
 			<div class="flex justify-between items-center">
 				<div class="flex">
 					<a href="/KarlGildenhuysCV.pdf" download><button class="bg-primary text-xl text-white rounded-[100px] px-5 py-2">Resume</button></a>
@@ -55,7 +56,9 @@ import SkillIcon from "../components/SkillIcon.astro";
 	<Section>
 		<SectionHeader title="A bit about me"/>
 		<div class="p-5"></div>
-		<p>My name is Karl. Having recently completed my BSc degree / Computer Science major from the University of Auckland, I am excited to start using my skills to add value to ... Checkout some of my projects above if you haven't already and get in touch if you think I look like a good fit for your company.</p>
+		<p>Hi! My name is Karl and I am a recent Computer Science graduate from the University of Auckland. 
+			I am passionate about using tech to solve business problems and building cool things on the web. 
+			Checkout my some of my projects above and reach out if you're keen to chat.</p>
 	</Section>	
 
 	<Section>
@@ -63,6 +66,7 @@ import SkillIcon from "../components/SkillIcon.astro";
 		<div class="p-5"></div>
 		<div class="flex flex-wrap w-full justify-center">
 			<SkillIcon src={Html} name="HTML"/>
+			<SkillIcon src={Css} name="CSS"/>
 			<SkillIcon src={Js} name="JS"/>
 			<SkillIcon src={Csharp} name="C#"/>
 			<SkillIcon src={React} name="React"/>
