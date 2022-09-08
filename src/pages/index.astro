@@ -74,5 +74,36 @@ import SkillIcon from "../components/SkillIcon.astro";
 			<SkillIcon src={Firebase} name="Firebase"/>
 		</div>
 	</Section>
+	<div class="bg-offwhite flex px-5 pt-5 pb-5 sm:pt-16 sm:px-16 md:px-30 lg:px-40 sm:ml-[110px] h-screen">
+		<div class="w-[50%]">
+			<h1 class="text-5xl text-highlight">Lets connect!</h1>
+			<div class="p-5"></div>
+			<p class="w-[75%]">If you want to grab a coffee for a quick chat. You can find me on social media or contact me here.</p>
+			<div class="p-5"></div>
+			<div class="display flex">
+				<a href="https://www.linkedin.com/in/karl-gildenhuys-b0286720a/" class="flex items-center"><img class="w-[25px] fill-primary" src={LinkedIn} alt=""></a>
+				<div class="p-5"></div>
+				<a href="https://github.com/KarlGilden" class="flex items-center"><img class="w-[25px] fill-primary" src={Github} alt=""></a>
+				<div class="p-5"></div>
+				<a href="mailto:karl.gildenhuys@gmail.com" class="flex items-center"><img class="w-[25px] fill-primary" src={Email} alt=""></a>
+			</div>
+		</div>
+		<div class="sm:p-2"></div>
+		<div class="w-[50%]">
+			<form class="flex flex-col" action="">
+				<small>Name:</small>
+				<input class="p-2 border-2 border-primary rounded-sm" type="text">
+				<div class="p-1"></div>
+				<small>Email:</small>
+				<input class="p-2 border-2 border-primary rounded-sm" type="text">
+				<div class="p-1"></div>
+				<small>Message:</small>
+				<textarea class="p-2 h-[100px] border-2 border-primary rounded-sm resize-none"/>
+				<div class="p-1"></div>
+				<button class="w-fit bg-primary text-white px-5 py-2 rounded-sm">Submit</button>
+			</form>
+
+		</div>
+	</div>
 </Layout>
 
