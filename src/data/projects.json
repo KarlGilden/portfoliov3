@@ -2,7 +2,10 @@
     {
         "id": "1",
         "name": "Apoteo",
-        "desc": "Coming Soon...",
+        "subtitle": "A web based solution to pharmacy data entry and analysis",
+        "desc": "Apoteo is a bespoke data entry and dashboard application, commissioned by a manager at Waitakari Hospital Pharamacy.",
+        "problem": "Collecting pharmacy data by hand is time-consuming and difficult to analyse and report.",
+        "solution": "A lightweight web based application to handle data entry and a sleek dashboard to facilitate analysis",
         "github": "https://github.com/KarlGilden/Apoteo",
         "live": "https://apoteo.vercel.app",
         "img": "/Apoteo.png"
@@ -10,7 +13,10 @@
     {
         "id": "2",
         "name": "BudgetMate",
-        "desc": "Coming Soon...",
+        "subtitle": "",
+        "desc": "Coming soon...",
+        "problem": "",
+        "solution": "",
         "github": "https://github.com/KarlGilden/budgetmate",
         "live": "https://effervescent-cactus-53aa4e.netlify.app/",
         "img": "/BM.png"
