@@ -34,7 +34,16 @@ const { name, desc, github, live, subtitle, problem, solution, img } = Astro.pro
             <a href="/"><Icon class="w-[50px]" name="bi:arrow-left"/></a>
         </div>
         <div class="p-2"></div>
-        <h1 class="text-6xl">{name}</h1>
+        <div class="flex flex-col sm:flex-row-reverse sm:items-end">
+            <div class="flex w-full h-fit sm:mb-1">
+                <a href={live} class="flex justify-center items-center px-2 text-xl w-[85px]  border-highlight border-2 bg-highlight rounded-sm text-white">Live</a>
+                <div class="p-2"></div>
+                <a href={github} class="flex justify-center items-center px-2 text-xl w-[85px] border-highlight border-2 rounded-sm">Github</a>
+            </div>
+            <div class="p-2"></div>
+            <h1 class="text-5xl sm:text-7xl">{name}</h1>
+
+        </div>
         <div class="p-1"></div>
         <h2 class="italic text-xl">{subtitle}</h2>
 
@@ -42,18 +51,17 @@ const { name, desc, github, live, subtitle, problem, solution, img } = Astro.pro
         <p class="text-xl">{desc}</p>
 
         <div class="p-3"></div>
-        <h6 class="text-xl"><span class="font-bold">Problem: </span>{problem}</h6>
+        <h6 class="text-lg"><span class="font-bold text-xl">Problem: </span>{problem}</h6>
         <div class="p-1"></div>
-        <h6 class="text-xl"><span class="font-bold">Solution: </span>{solution}</h6>
+        <h6 class="text-lg"><span class="font-bold text-xl">Solution: </span>{solution}</h6>
         <div class="p-3"></div>
 
-        <p>Learn more by visiting my github or try the live website below:</p>
-        <div class="p-1"></div>
-        <div class="flex w-full">
-            <a href={live} class="flex justify-center items-center px-2 text-xl w-[85px]  border-highlight border-2 bg-highlight rounded-sm text-white">Live</a>
-            <div class="p-2"></div>
-            <a href={github} class="flex justify-center items-center px-2 text-xl w-[85px] border-highlight border-2 rounded-sm">Github</a>
+        <div class="p-2"></div>
+        <div class="sm:w-[75%] mx-auto">
+            <img src={img} alt="">
         </div>
+        <div class="p-2"></div>
+
 
     </Section>
 </Layout>
