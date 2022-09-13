@@ -1,5 +1,10 @@
+---
+export interface Props {
+	id: string;
+}
+const { id } = Astro.props as Props;
+---
 
-
-<section class="bg-offwhite p-5 sm:px-16 sm:py-5 md:px-30 md:py-12 lg:px-40 sm:ml-[110px]">
+<section id={id} class="bg-offwhite p-5 sm:px-16 sm:py-5 md:px-30 md:py-12 lg:px-40 sm:ml-[110px]">
     <slot/>
 </section>

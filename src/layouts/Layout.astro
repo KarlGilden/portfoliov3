@@ -7,6 +7,7 @@ import Monitor from '/monitor.svg'
 import User from '/user.svg'
 import Briefcase from '/briefcase.svg'
 import Email from '/email.svg'
+import Contact from '/mail.svg'
 import { Icon } from 'astro-icon'
 export interface Props {
 	title: string;
@@ -38,17 +39,22 @@ const { title } = Astro.props as Props;
 				<div class="p-5"></div>
 				<div class="flex justify-center w-full text-white cursor-pointer hover:text-highlight">
 					<img class="w-[15px]" src={Monitor} alt="">
-					<a href="/"><p class="hidden font-title ml-5 w-[50px] group-hover:block">Work</p></a>
-				</div>
-				<div class="p-5"></div>
-				<div class="flex justify-center w-full text-white cursor-pointer hover:text-highlight">
-					<img class="w-[15px]" src={User} alt="">
-					<a href="/"><p class="hidden font-title ml-5 w-[50px] group-hover:block">About</p></a>
+					<a href="/#work"><p class="hidden font-title ml-5 w-[50px] group-hover:block">Work</p></a>
 				</div>
 				<div class="p-5"></div>
 				<div class="flex justify-center w-full text-white cursor-pointer hover:text-highlight">
 					<img class="w-[15px]" src={Briefcase} alt="">
-					<a href="/"><p class="hidden ml-5 font-title w-[50px] group-hover:block ">Toolkit</p></a>
+					<a href="/#skills"><p class="hidden ml-5 font-title w-[50px] group-hover:block ">Toolkit</p></a>
+				</div>
+				<div class="p-5"></div>
+				<div class="flex justify-center w-full text-white cursor-pointer hover:text-highlight">
+					<img class="w-[15px]" src={User} alt="">
+					<a href="/#about"><p class="hidden font-title ml-5 w-[50px] group-hover:block">About</p></a>
+				</div>
+				<div class="p-5"></div>
+				<div class="flex justify-center w-full text-white cursor-pointer hover:text-highlight">
+					<img class="w-[15px]" src={Contact} alt="">
+					<a href="/#contact"><p class="hidden font-title ml-5 w-[50px] group-hover:block">Contact</p></a>
 				</div>
 			</div>
 			<div class="h-[100px]">
@@ -74,18 +80,24 @@ const { title } = Astro.props as Props;
 				<div class="p-5"></div>
 				<div class="flex justify-center w-full text-white cursor-pointer hover:text-highlight">
 					<img class="w-[15px]" src={Monitor} alt="">
-					<a href="/" onclick="openMenu()"><p class="font-title ml-5 w-[50px]">Work</p></a>
-				</div>
-				<div class="p-5"></div>
-				<div class="flex justify-center w-full text-white cursor-pointer hover:text-highlight">
-					<img class="w-[15px]" src={User} alt="">
-					<a href="/" onclick="openMenu()"><p class="font-title ml-5 w-[50px]">About</p></a>
+					<a href="/#work" onclick="openMenu()"><p class="font-title ml-5 w-[50px]">Work</p></a>
 				</div>
 				<div class="p-5"></div>
 				<div class="flex justify-center w-full text-white cursor-pointer hover:text-highlight">
 					<img class="w-[15px]" src={Briefcase} alt="">
-					<a href="/" onclick="openMenu()"><p class="font-title ml-5 w-[50px]">Toolkit</p></a>
+					<a href="/#skills" onclick="openMenu()"><p class="font-title ml-5 w-[50px]">Toolkit</p></a>
 				</div>
+				<div class="p-5"></div>
+				<div class="flex justify-center w-full text-white cursor-pointer hover:text-highlight">
+					<img class="w-[15px]" src={User} alt="">
+					<a href="/#about" onclick="openMenu()"><p class="font-title ml-5 w-[50px]">About</p></a>
+				</div>
+				<div class="p-5"></div>
+				<div class="flex justify-center w-full text-white cursor-pointer hover:text-highlight">
+					<img class="w-[15px]" src={Contact} alt="">
+					<a href="/#contact" onclick="openMenu()"><p class="font-title ml-5 w-[50px]">Contact</p></a>
+				</div>
+
 			</div>
 			<div class="h-[100px]">
 				<h1 class="text-5xl"></h1>
