@@ -1,24 +1,28 @@
 ---
+import Github from '/github.svg'
+
 export interface Props {
-    id:string,
+    link: string
     img:string,
     title:string,
     tagline:string,
     tech:string
 }
 
-const { id, img, title, tagline, tech } = Astro.props;
+const { link, title, tagline, tech } = Astro.props;
 ---
-<a class="w-[50%]" href={`/projects/${id}`}>
-    <div class="flex flex-wrap hover:border-b-highlight border-b-offwhite border-b-4 transition-ease duration-[0.3s] pb-1">
-        <div class={`h-full  group flex flex-col justify-between`}>
+<a class="sm:w-[50%] w-full" target="_blank" href={link}>
+    <div class="w-full flex flex-wrap hover:border-b-highlight border-b-offwhite border-b-4 transition-ease duration-[0.3s] pb-1">
+        <div class={`w-full group flex flex-col justify-between`}>
             <div>
                 <h2 class="text-3xl underline">{title}</h2>
                 <p class="p-1"></p>
                 <p class="text-lg">{tagline}</p>
             </div>
-            <p class="p-1"></p>
-            <small class="text-md">{tech}</small>
+            <p class="p-1"></p> 
+            <div class="flex items-center justify-between w-full">
+                <small class="text-md">{tech}</small>
+            </div>
         </div>
     </div>
 
