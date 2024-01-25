@@ -1,24 +1,24 @@
 [
     {
         "id": "1",
-        "name": "Apoteo",
+        "name": "LeoLang",
         "subtitle": "A web based solution to pharmacy data entry and analysis",
         "desc": "Apoteo is a bespoke data entry and dashboard application, commissioned by Charge Pharmacist at Waitakere Hospital Outpatients Pharamacy.",
         "problem": "Collecting pharmacy data by hand is time-consuming and difficult to analyse and report.",
         "solution": "A lightweight web based application to handle data entry and a sleek dashboard to facilitate analysis",
-        "github": "https://github.com/KarlGilden/Apoteo",
-        "live": "https://apoteo.vercel.app",
+        "github": "https://github.com/KarlGilden/LeoLangLite",
+        "live": "https://leolang.netlify.app",
         "img": "/apoteo-dashboard.jpeg"
     },
     {
         "id": "2",
-        "name": "BudgetMate",
+        "name": "KurzUrl",
         "subtitle": "",
         "desc": "Coming soon...",
         "problem": "",
         "solution": "",
-        "github": "https://github.com/KarlGilden/budgetmate",
-        "live": "https://effervescent-cactus-53aa4e.netlify.app/",
+        "github": "https://github.com/KarlGilden/KurzUrl",
+        "live": "https://kurzurl.netlify.app/",
         "img": "/BM.png"
     }
 ]

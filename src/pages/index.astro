@@ -2,107 +2,66 @@
 import Layout from "../layouts/Layout.astro";
 import Section from "../layouts/Section.astro";
 import Project from "../components/Project.astro";
-import Apoteo from '/Apoteo.png'
-import Profile from '/profile.jpg'
 import Github from '/github.svg'
 import LinkedIn from '/linkedin.svg'
 import Email from '/email.svg'
-import Html from '/html.svg'
-import Css from '/css.svg'
-import React from '/react.svg'
-import Js from '/js.svg'
-import Dotnet from '/dotnet.svg'
-import Csharp from '/csharp.svg'
-import Firebase from '/firebase.svg'
 import SectionHeader from "../components/SectionHeader.astro";
-import SkillIcon from "../components/SkillIcon.astro";
+import Links from "../components/Links.astro";
 ---
 
 
 <Layout title="Home">
-	<main class="bg-offwhite px-5 pt-5 pb-5 sm:pt-16 sm:px-16 md:px-30 lg:px-40 sm:ml-[110px]">
-			<div class="flex justify-between items-center">
-				<div class="flex">
-					<a href="/KarlGildenhuysCV.pdf" download><button class="bg-primary text-xl text-white rounded-[100px] px-5 py-2">Resume</button></a>
-					<div class="p-2"></div>
-					<div class="display flex">
-						<a href="https://www.linkedin.com/in/karl-gildenhuys-b0286720a/" class="flex items-center"><img class="w-[25px] fill-primary" src={LinkedIn} alt=""></a>
-						<div class="p-5"></div>
-						<a href="https://github.com/KarlGilden" class="flex items-center"><img class="w-[25px] fill-primary" src={Github} alt=""></a>
-						<div class="p-5"></div>
-						<a href="mailto:karl.gildenhuys@gmail.com" class="flex items-center"><img class="w-[25px] fill-primary" src={Email} alt=""></a>
-					</div>
-					<div class="p-2"></div>
-				</div>
-				<h1 class="font-title text-2xl hidden sm:block"> <span class="text-highlight">Karl</span>Gildenhuys</h1>
-		</div>
-	</main>
+	<Section id={"about"}>
+		<p class="max-w-[600px] font-light text-xl">I am a full-stack web developer who is passionate about creating amazing user experiences with strong backends. I work professionally with Javascript and ABAP, however, I also have extensive experience with industry technologies such as C# .NET and React.</p>
+	</Section>	
+
+	<p class="p-7"></p>
 	
 	<Section id={"work"}>
 		<SectionHeader title="My work"/>
-		<div class="p-5"></div>
-		<div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+		<div class="p-2"></div>
+		<div class="flex flex-col sm:flex-row justify-between">
 			<Project 
-				img={'bg-[url(/Apoteo.png)]'}
+				title="LeoLang"
+				tagline="Learn to read te reo Māori with ease"
+				tech="React, JS, CSS"
+				img={'/leolang.png'}
 				id={"1"}
 			/>
+			<p class="p-5"></p>
 			<Project 
-				img={'bg-[url(/BM.png)]'}
+				title="KurzUrl"
+				tagline="A simple url shortener service and interface"
+				tech=".NET Core API, C#, JS"
+				img={'/kurzurl.png'}
 				id={"2"}
 			/>
 		</div>
-
 	</Section>
 
-	<Section id="skills">
-		<SectionHeader title="My toolkit"/>
-		<div class="p-5"></div>
-		<div class="flex flex-wrap w-full justify-center">
-			<SkillIcon src={Html} name="HTML"/>
-			<SkillIcon src={Css} name="CSS"/>
-			<SkillIcon src={Js} name="JS"/>
-			<SkillIcon src={Csharp} name="C#"/>
-			<SkillIcon src={React} name="React"/>
-			<SkillIcon src={Dotnet} name=".NET"/>
-			<SkillIcon src={Firebase} name="Firebase"/>
-		</div>
-	</Section>
+	<p class="p-7"></p>
 
-	<Section id={"about"}>
-		<SectionHeader title="A bit about me"/>
-		<div class="p-5"></div>
-		<p>Hi! My name is Karl and I am a recent Computer Science graduate from the University of Auckland. 
-			I am passionate about using tech to solve business problems and building cool things on the web. 
-			Checkout my some of my projects above and reach out if you're keen to chat.</p>
-	</Section>	
-
-	<div id="contact" class="bg-offwhite flex flex-col sm:flex-row px-5 pt-5 pb-5 sm:pt-16 sm:px-16 md:px-30 lg:px-40 sm:ml-[110px] h-screen">
-		<div class="sm:w-[50%]">
+	<div id="contact" class="bg-offwhite flex flex-col sm:flex-row">
+		<div class="sm:w-[50%] flex flex-col justify-evenly">
 			<h1 class="text-5xl text-highlight">Lets connect!</h1>
 			<div class="p-2 sm:p-5"></div>
 			<p class="w-[75%]">If you want to grab a coffee for a quick chat. You can find me on social media or contact me here.</p>
 			<div class="p-2 sm:p-5"></div>
-			<div class="display flex">
-				<a href="https://www.linkedin.com/in/karl-gildenhuys-b0286720a/" class="flex items-center"><img class="w-[25px] fill-primary" src={LinkedIn} alt=""></a>
-				<div class="p-5"></div>
-				<a href="https://github.com/KarlGilden" class="flex items-center"><img class="w-[25px] fill-primary" src={Github} alt=""></a>
-				<div class="p-5"></div>
-				<a href="mailto:karl.gildenhuys@gmail.com" class="flex items-center"><img class="w-[25px] fill-primary" src={Email} alt=""></a>
-			</div>
+			<Links/>
 		</div>
 		<div class="p-2"></div>
 		<div class="sm:w-[50%]">
 			<form class="flex flex-col" action="">
 				<small>Name:</small>
-				<input class="p-2 border-2 border-primary rounded-sm" type="text">
+				<input class="p-1 bg-secondary border-2 border-[#333] rounded-sm" type="text">
 				<div class="p-1"></div>
 				<small>Email:</small>
-				<input class="p-2 border-2 border-primary rounded-sm" type="text">
+				<input class="p-1 bg-secondary border-2 border-[#333] rounded-sm" type="text">
 				<div class="p-1"></div>
 				<small>Message:</small>
-				<textarea class="p-2 h-[100px] border-2 border-primary rounded-sm resize-none"/>
+				<textarea class="p-1 bg-secondary h-[100px] border-2 border-[#333] rounded-sm resize-none"/>
 				<div class="p-1"></div>
-				<button class="w-fit bg-primary text-white px-6 py-3 rounded-sm">Submit</button>
+				<button class="w-full bg-highlight text-white px-6 py-2 rounded-sm">Submit</button>
 			</form>
 
 		</div>

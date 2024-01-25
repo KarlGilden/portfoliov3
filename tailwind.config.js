@@ -5,12 +5,12 @@ module.exports = {
     colors: {
       'black': "#000",
       'white': "#fff",
-      'offwhite': "#EDEDED",
-      'highlight': "#4CAA51",
-      'primary': "#152238",
+      'offwhite': "#191919",
+      'highlight': "#0B60B0",
+      'primary': "#000",
       'secondary': "#222",
       'transparent': 'transparent',
-      'shade': 'rgba(43, 43, 43, 0.75)'
+      'shade': 'rgba(0, 0, 0, 0.90)'
 
     },
     fontFamily: {
